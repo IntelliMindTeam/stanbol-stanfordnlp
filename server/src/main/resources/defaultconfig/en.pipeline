@@ -7,8 +7,9 @@
 # (5) Detect Named Entities
 # (6) Parse Tree
 # (7) Sentiment (requires Parse Tree)
+# (8) Coreference (requires Parse Tree)
 
-annotators = tokenize, ssplit, pos, lemma, ner, parse, sentiment
+annotators = tokenize, ssplit, pos, lemma, ner, parse, dcoref
 
 #Simpler pipeline without sentiment analysis
 #annotators = tokenize, ssplit, pos, lemma, ner
