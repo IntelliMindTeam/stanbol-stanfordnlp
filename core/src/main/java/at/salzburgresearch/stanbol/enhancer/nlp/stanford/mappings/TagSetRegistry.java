@@ -20,6 +20,7 @@ import java.util.HashMap;
 import java.util.Locale;
 import java.util.Map;
 
+import org.apache.clerezza.commons.rdf.IRI;
 import org.apache.clerezza.rdf.core.UriRef;
 import org.apache.stanbol.enhancer.nlp.dependency.GrammaticalRelation;
 import org.apache.stanbol.enhancer.nlp.dependency.GrammaticalRelationTag;
@@ -400,10 +401,10 @@ public class TagSetRegistry {
         nerTags.addTag(new NerTag("LOCATION", OntologicalClasses.DBPEDIA_PLACE));
         
         //other NER tags mapped to some Ontology Concept
-        nerTags.addTag(new NerTag("MONEY", new UriRef(NamespaceEnum.dbpedia_ont + "Currency")));
-        nerTags.addTag(new NerTag("DATE", new UriRef("http://www.w3.org/2006/time#Instant")));
-        nerTags.addTag(new NerTag("TIME", new UriRef("http://www.w3.org/2006/time#Instant")));
-        nerTags.addTag(new NerTag("DURATION", new UriRef("http://www.w3.org/2006/time#Interval")));
+        nerTags.addTag(new NerTag("MONEY", new IRI(NamespaceEnum.dbpedia_ont + "Currency")));
+        nerTags.addTag(new NerTag("DATE", new IRI("http://www.w3.org/2006/time#Instant")));
+        nerTags.addTag(new NerTag("TIME", new IRI("http://www.w3.org/2006/time#Instant")));
+        nerTags.addTag(new NerTag("DURATION", new IRI("http://www.w3.org/2006/time#Interval")));
 
         //further unmapped POS tags
         nerTags.addTag(new NerTag("MISC"));
